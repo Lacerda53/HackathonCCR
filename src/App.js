@@ -1,16 +1,20 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NotFound from './components/NotFound';
 import Main from './modules/Main';
+import stores from './stores';
 
-function App() {  
+function App() {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path={["/", "/quiz"]} component={Main} />
-        <Route path="*" component={NotFound} />
-      </Switch>
-    </BrowserRouter>
+    <Provider store={stores}>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path={["/", "/quiz"]} component={Main} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

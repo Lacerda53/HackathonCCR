@@ -6,7 +6,7 @@ import Welcome from './Welcome';
 
 function Main() {
     return (
-        <div style={{}}>
+        <div>
             <Header />
 
             <Switch>

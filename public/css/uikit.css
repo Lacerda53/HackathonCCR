@@ -26,6 +26,47 @@ html {
 body {
   margin: 0;
 }
+
+.card {
+  display: block;
+}
+
+.list .card {
+  display: none;
+}
+.list .current {
+  display: block;
+}
+
+@keyframes yay {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+@keyframes nope {
+  from {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  to {
+    transform: rotate(-40deg) translateY(-80px);
+    opacity: 0;
+  }
+}
+
+.cardcontainer .yes{
+  animation: yay 0.7s ease-out;
+}
+.cardcontainer .nope{
+  animation: nope 0.7s ease-out;
+}
+
 /* Links
  ========================================================================== */
 /*
@@ -2057,6 +2098,26 @@ select.uk-form-width-xsmall {
   color: #fff;
 }
 /*
+ * White
+ */
+ .uk-button-white {
+  background-color: #fff;
+  color: #333;
+  border: 1px solid transparent;
+}
+/* Hover + Focus */
+.uk-button-white:hover,
+.uk-button-white:focus {
+  background-color: #fff;
+  color: #333;
+}
+/* OnClick + Active */
+.uk-button-white:active,
+.uk-button-white.uk-active {
+  background-color: #fff;
+  color: #333;
+}
+/*
  * Danger
  */
 .uk-button-danger {
@@ -3092,8 +3153,8 @@ select.uk-form-width-xsmall {
   border-radius: 500px;
   vertical-align: middle;
   /* 1 */
-  background: #8C30F5;
-  color: #fff;
+  border: 2px solid #D2B1F7;
+  color: #8C30F5;
   font-size: 0.875rem;
   /* 2 */
   display: inline-flex;
@@ -3105,9 +3166,11 @@ select.uk-form-width-xsmall {
  */
 .uk-badge:hover,
 .uk-badge:focus {
+  background-color: #8C30F5;
   color: #fff;
   text-decoration: none;
   outline: none;
+  cursor: pointer;
 }
 /* ========================================================================
    Component: Label
@@ -4094,7 +4157,7 @@ select.uk-form-width-xsmall {
   box-sizing: border-box;
   width: 270px;
   padding: 20px 20px;
-  background: #461C7B;
+  background: #ccbcdf;
   /* 3 */
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -10749,8 +10812,8 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*='uk-card-media']) .uk-button-primary,
 .uk-overlay-primary .uk-button-primary,
 .uk-offcanvas-bar .uk-button-primary {
-  background-color: #fff;
-  color: #666;
+  background-color: #8C30F5;
+  color: #fff;
 }
 .uk-light .uk-button-primary:hover,
 .uk-light .uk-button-primary:focus,
@@ -10977,7 +11040,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*='uk-card-media']) .uk-close,
 .uk-overlay-primary .uk-close,
 .uk-offcanvas-bar .uk-close {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(0, 0, 0, 0.5);
 }
 .uk-light .uk-close:hover,
 .uk-light .uk-close:focus,
@@ -12363,7 +12426,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*='uk-card-media']) .uk-text-primary,
 .uk-overlay-primary .uk-text-primary,
 .uk-offcanvas-bar .uk-text-primary {
-  color: #fff !important;
+  color: #fff;
 }
 .uk-light .uk-text-secondary,
 .uk-section-primary:not(.uk-preserve-color) .uk-text-secondary,
@@ -12376,7 +12439,7 @@ iframe.uk-cover {
 .uk-card-secondary > :not([class*='uk-card-media']) .uk-text-secondary,
 .uk-overlay-primary .uk-text-secondary,
 .uk-offcanvas-bar .uk-text-secondary {
-  color: #fff !important;
+  color: #333 !important;
 }
 .uk-light .uk-column-divider,
 .uk-section-primary:not(.uk-preserve-color) .uk-column-divider,

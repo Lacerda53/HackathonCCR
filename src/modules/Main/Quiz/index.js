@@ -1,12 +1,19 @@
 import React from 'react';
-
+import { useSelector } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
+import ResultQuiz from './ResultQuiz';
+import Vocational from './Vocational';
 function Quiz() {
+  const pageQuiz = useSelector(state => state.pageQuiz);
+
   return (
-    <div className="uk-flex uk-flex-center">
-      <div className="uk-text-lead uk-margin-top uk-text-primary-dark uk-text-bold">
-        Quiz interativo
-      </div>
-    </div>
+    <Switch>
+      {pageQuiz === 0 ?
+        <Route path="/quiz" component={Vocational} />
+        :
+        <Route path="/quiz" component={ResultQuiz} />
+      }
+    </Switch>
   );
 }
 

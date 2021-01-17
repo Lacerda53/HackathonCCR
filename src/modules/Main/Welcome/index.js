@@ -4,6 +4,7 @@ import LazyImage from '../../../components/LazyImage'
 import Svg01 from '../../../assets/icons/01.svg'
 import Svg02 from '../../../assets/icons/02.svg'
 import Svg03 from '../../../assets/icons/03.svg'
+import { Link } from 'react-router-dom';
 
 function Welcome() {
   return (
@@ -54,9 +55,9 @@ function Welcome() {
                 Descubra, baseado em seus interesses, o que você pode ser, sem pressões e rótulos!
             </div>
             <br/>
-              <a href="#" className="uk-text-primary uk-text-meta uk-text-bold">
+              <Link to="/quiz" className="uk-text-primary uk-text-meta uk-text-bold">
                 Explore <span uk-icon="icon: arrow-right"></span>
-              </a>
+              </Link>
             </div>
           </div>
           <div>
