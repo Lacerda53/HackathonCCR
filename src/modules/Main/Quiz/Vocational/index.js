@@ -6,6 +6,7 @@ import quiz4 from '../../../../assets/img/quiz4.png'
 import closeSvg from '../../../../assets/icons/close.svg'
 import heartSvg from '../../../../assets/icons/heart.svg'
 import { useDispatch } from 'react-redux';
+import LazyImage from '../../../../components/LazyImage'
 
 function Vocational() {
   const dispatch = useDispatch();
@@ -39,22 +40,22 @@ function Vocational() {
             <ul className="uk-slider-items uk-grid">
               <li className="uk-width-1-1">
                 <div className="uk-panel">
-                  <img src={quiz1} alt="" />
+                  <LazyImage image={quiz1} />
                 </div>
               </li>
               <li className="uk-width-1-1">
                 <div className="uk-panel">
-                  <img src={quiz2} alt="" />
+                <LazyImage image={quiz2} />
                 </div>
               </li>
               <li className="uk-width-1-1">
                 <div className="uk-panel">
-                  <img src={quiz3} alt="" />
+                <LazyImage image={quiz3} />
                 </div>
               </li>
               <li className="uk-width-1-1">
                 <div className="uk-panel">
-                  <img src={quiz4} alt="" />
+                <LazyImage image={quiz4} />
                 </div>
               </li>
             </ul>
