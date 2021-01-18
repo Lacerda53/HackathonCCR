@@ -10,7 +10,7 @@ function App() {
     <Provider store={stores}>
       <BrowserRouter>
         <Switch>
-          <Route exact path={["/", "/quiz"]} component={Main} />
+          <Route exact path={["/", "/quiz", "/mentoring", "/streaming"]} component={Main} />
           <Route path="*" component={NotFound} />
         </Switch>
       </BrowserRouter>

@@ -15,6 +15,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import './reactCalendar.css'
 import LazyImage from '../../../../components/LazyImage'
+import { Link } from 'react-router-dom';
 
 const data = {
   labels: ['Capacidade Analítica', 'Pensamento Critico', 'Sociabilidade', 'Criatividade', 'Tomada de risco', 'Planejamento e organização', 'Influência'],
@@ -86,7 +87,7 @@ function ResultQuiz() {
           </div>
           <div className="uk-margin-top">
             <ul className="uk-accordion" uk-accordion="collapsible: true">
-              <li className="uk-open uk-card uk-card-body uk-card-default">
+              <li className="uk-card uk-card-body uk-card-default">
                 <a onClick={() => setIsOpen(isOpen == true ? false : true)} className="uk-accordion-title uk-flex uk-flex-between uk-flex-middle">
                   <div className="uk-flex">
                     <img className="uk-margin-right" src={Svg01} alt="" />
@@ -94,7 +95,7 @@ function ResultQuiz() {
                       Influenciador digital
                     </div>
                   </div>
-                  <div className="uk-text-meta uk-width-1-2 uk-text-truncate" style={{ color: '#666666', fontSize: '16px' }}>
+                  <div className="uk-text-meta uk-width-1-2" style={{ color: '#666666', fontSize: '14px' }}>
                     Utiliza os meios de comunicação para compartilhar seus hábitos, buscando inspirar e influenciar pessoas. As oportunidades de negócios podem estar na divulgação de produtos ou serviços, geralmente segmentados a partir do perfil do influenciador .
                   </div>
                   <span className="uk-icon-link uk-text-secondary" uk-icon={isOpen ? `chevron-down` : `chevron-up`}></span>
@@ -140,7 +141,7 @@ function ResultQuiz() {
                           <span class="uk-badge uk-padding-small">19:30</span>
                           <span class="uk-badge uk-padding-small">20:30</span>
                         </div>
-                        <button className="uk-button uk-button-primary uk-border-rounded uk-text-bold"><span uk-icon="icon: clock; ratio:1.3"></span> Agendar mentoria</button>
+                        <Link to="/mentoring" className="uk-button uk-button-primary uk-border-rounded uk-text-bold"><span uk-icon="icon: clock; ratio:1.3"></span> Agendar mentoria</Link>
                       </div>
                     </div>
                   </div>
@@ -189,7 +190,7 @@ function ResultQuiz() {
                       Analista de redes sociais
                     </div>
                   </div>
-                  <div className="uk-text-meta uk-width-1-2 uk-text-truncate" style={{ color: '#666666', fontSize: '16px' }}>
+                  <div className="uk-text-meta uk-width-1-2" style={{ color: '#666666', fontSize: '14px' }}>
                     Gerencia o conteúdo online a partir de estratégias de marketing, promovendo marcas, gerando leads, negócios e se relacionando com o público. O monitoramento e análise de performance também são pontos importantes.
                   </div>
                   <span className="uk-icon-link uk-text-secondary" uk-icon={isOpen ? `chevron-down` : `chevron-up`}></span>
@@ -235,7 +236,7 @@ function ResultQuiz() {
                           <span class="uk-badge uk-padding-small">19:30</span>
                           <span class="uk-badge uk-padding-small">20:30</span>
                         </div>
-                        <button className="uk-button uk-button-primary uk-border-rounded uk-text-bold"><span uk-icon="icon: clock; ratio:1.3"></span> Agendar mentoria</button>
+                        <Link to="/mentoring" className="uk-button uk-button-primary uk-border-rounded uk-text-bold"><span uk-icon="icon: clock; ratio:1.3"></span> Agendar mentoria</Link>
                       </div>
                     </div>
                   </div>
@@ -284,7 +285,7 @@ function ResultQuiz() {
                       Publicitário
                     </div>
                   </div>
-                  <div className="uk-text-meta uk-width-1-2 uk-text-truncate" style={{ color: '#666666', fontSize: '16px' }}>
+                  <div className="uk-text-meta uk-width-1-2" style={{ color: '#666666', fontSize: '14px' }}>
                     Realiza campanhas de divulgação para produtos, criando estratégias de venda, marcas, logotipos, embalagens, outdoors, etc. Pode atuar como autônomo ou fazer parte de uma equipe em uma agência de publicidade.Mattis et sed nam sem tellus erat.
                   </div>
                   <span className="uk-icon-link uk-text-secondary" uk-icon={isOpen ? `chevron-down` : `chevron-up`}></span>
@@ -330,7 +331,7 @@ function ResultQuiz() {
                           <span class="uk-badge uk-padding-small">19:30</span>
                           <span class="uk-badge uk-padding-small">20:30</span>
                         </div>
-                        <button className="uk-button uk-button-primary uk-border-rounded uk-text-bold"><span uk-icon="icon: clock; ratio:1.3"></span> Agendar mentoria</button>
+                        <Link to="/mentoring" className="uk-button uk-button-primary uk-border-rounded uk-text-bold"><span uk-icon="icon: clock; ratio:1.3"></span> Agendar mentoria</Link>
                       </div>
                     </div>
                   </div>

@@ -10,9 +10,10 @@ function Header() {
           <div className="uk-navbar-left">
             <Link to="/"><img src={logoSvg} alt=""/></Link>
             <ul className="uk-navbar-nav uk-visible@m">
-              <li ><a style={{ color: '#3C3543', fontSize: '14px', fontWeight: 600 }} href="#">Home</a></li>
-              <li ><a style={{ color: '#3C3543', fontSize: '14px', fontWeight: 600 }} href="#">Como funciona</a></li>
-              <li ><a style={{ color: '#3C3543', fontSize: '14px', fontWeight: 600 }} href="#">Alunos</a></li>
+              <li ><Link to="/" style={{ color: '#3C3543', fontSize: '14px', fontWeight: 600 }} href="#">Home</Link></li>
+              <li ><a href="/#how" style={{ color: '#3C3543', fontSize: '14px', fontWeight: 600 }} >Como funciona</a></li>
+              <li ><Link to="/quiz" style={{ color: '#3C3543', fontSize: '14px', fontWeight: 600 }} href="/quiz">Alunos</Link></li>
+              <li ><Link to="/mentoring" style={{ color: '#3C3543', fontSize: '14px', fontWeight: 600 }} href="/quiz">Mentoria</Link></li>
             </ul>
           </div>
 
@@ -34,9 +35,10 @@ function Header() {
                 <br />
                 <br />
                 <ul className="uk-nav">
-                  <li ><a className="uk-text-secondary uk-text-bold" href="#">Home</a></li>
-                  <li ><a className="uk-text-secondary uk-text-bold" href="#">Como funciona</a></li>
-                  <li ><a className="uk-text-secondary uk-text-bold" href="#">Alunos</a></li>
+                  <li ><Link to="/" className="uk-text-secondary uk-text-bold" href="#">Home</Link></li>
+                  <li ><a className="uk-text-secondary uk-text-bold" href="/#how">Como funciona</a></li>
+                  <li ><Link to="/quiz" className="uk-text-secondary uk-text-bold" href="/quiz">Alunos</Link></li>
+                  <li ><Link to="/quiz" className="uk-text-secondary uk-text-bold" href="/mentoring">Mentoria</Link></li>
                 </ul>
                 <div className="uk-navbar-item">
                 <button style={{width:'100px', padding: 0}} className="uk-button uk-text-primary uk-border-rounded uk-text-bold">Login</button>

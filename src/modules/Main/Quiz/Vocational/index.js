@@ -13,7 +13,13 @@ function Vocational() {
   const [index, setIndex] = useState(1);
 
   function onNext() {
-    setIndex(index + 1);
+    if(index +1 != 5)
+    {
+      setIndex(index + 1);
+    }
+    else{
+      dispatch(togglePage())
+    }
   }
 
   function togglePage(){
@@ -22,12 +28,6 @@ function Vocational() {
       pageQuiz: 1
     }
   }
-
-  useEffect(() => {
-    if (index > 4) {
-      dispatch(togglePage())
-    }
-  }, [index]);
   
   return (
     <div className="uk-flex uk-flex-center uk-flex-column uk-flex-middle">
@@ -36,7 +36,7 @@ function Vocational() {
     </div>
       <div className="uk-grid uk-grid-small uk-flex uk-flex-center">
         <div className="uk-flex uk-width-1-2@m">
-          <div className="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true">
+          <div className="uk-position-relative uk-visible-toggle uk-light" tabindex="-1" uk-slider="center: true;finite: true">
             <ul className="uk-slider-items uk-grid">
               <li className="uk-width-1-1">
                 <div className="uk-panel">
@@ -57,6 +57,8 @@ function Vocational() {
                 <div className="uk-panel">
                 <LazyImage image={quiz4} />
                 </div>
+              </li>
+              <li className="uk-width-1-1">
               </li>
             </ul>
             <div className="uk-text-secondary" style={{ fontSize: '17px' }}>
